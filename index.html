@@ -52,10 +52,12 @@
     }
 
     .logo{
-      width:56px;height:56px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));box-shadow:var(--shadow);
+      width:56px;height:56px;border-radius:12px;display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--primary),var(--accent));
+      box-shadow:var(--shadow);overflow:hidden;
     }
 
-    .logo svg{width:36px;height:36px;filter:drop-shadow(0 4px 14px rgba(10,143,179,0.18))}
+    .logo img{width:100%;height:100%;object-fit:cover;border-radius:12px}
 
     .brand h1{font-size:18px;margin:0}
     .brand p{margin:0;font-size:12px;color:var(--muted)}
@@ -109,11 +111,11 @@
     .avatar{width:84px;height:84px;border-radius:14px;background:linear-gradient(180deg,var(--primary),var(--accent));display:grid;place-items:center;color:white;font-weight:800;font-size:28px}
 
     /* Testimonials */
-    .testimonials{margin-top:20px;display:flex;gap:12px}
-    .testi{background:linear-gradient(180deg,#ffffff, #fbfeff);padding:14px;border-radius:12px;box-shadow:0 8px 30px rgba(8,20,30,0.04);flex:1}
+    .testimonials{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+    .testi{background:linear-gradient(180deg,#ffffff, #fbfeff);padding:14px;border-radius:12px;box-shadow:0 8px 30px rgba(8,20,30,0.04);flex:1;min-width:240px}
 
     /* Footer */
-    footer{margin-top:28px;padding:18px;border-radius:12px;background:transparent;display:flex;justify-content:space-between;align-items:center}
+    footer{margin-top:28px;padding:18px;border-radius:12px;background:transparent;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
     footer p{color:var(--muted);margin:0}
 
     /* Responsive */
@@ -134,19 +136,14 @@
     /* small helpers */
     .muted{color:var(--muted)}
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#f1fdff;font-weight:700;color:var(--primary);font-size:13px}
-
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <a class="brand" href="#">
-        <div class="logo" aria-hidden="true">
-          <!-- simple tooth / cortex symbol -->
-          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M32 4c6 0 12 3 15 8 3 5 3 16-1 24s-11 18-26 18-24-11-20-20C9 16 20 4 32 4z" fill="white" opacity="0.95"/>
-            <circle cx="44" cy="18" r="4" fill="#0A8FB3" opacity="0.12"/>
-          </svg>
+        <div class="logo">
+          <img src="omni1.jpeg" alt="Logo OmniCortex">
         </div>
         <div>
           <h1>OmniCortex</h1>
@@ -211,7 +208,6 @@
             </div>
             <button type="submit">Enviar solicitação</button>
           </form>
-
         </aside>
       </section>
 
@@ -238,7 +234,7 @@
           <div style="display:flex;gap:12px;margin-top:12px;align-items:center">
             <div class="avatar">Dr</div>
             <div>
-              <strong>Dr. Rafael Souza</strong>
+              <strong>Dr. Kauan Marques</strong>
               <p class="muted" style="margin:4px 0 0;font-size:13px">Especialista em Implantodontia</p>
             </div>
           </div>
@@ -246,14 +242,13 @@
           <div style="display:flex;gap:12px;margin-top:12px;align-items:center">
             <div class="avatar">Dr</div>
             <div>
-              <strong>Dra. Marina Alves</strong>
+              <strong>Dr. Vinicius Pereira</strong>
               <p class="muted" style="margin:4px 0 0;font-size:13px">Estética Dental & Harmonização</p>
             </div>
           </div>
         </div>
 
         <div class="team-photo" aria-hidden="true">
-          <!-- placeholder image area: staff/clinic photo could go here -->
           <svg width="220" height="140" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="220" height="140" rx="12" fill="#ffffff"/>
             <g fill="#e6f8fb">
@@ -268,14 +263,13 @@
       <section class="testimonials" aria-label="Depoimentos">
         <div class="testi">
           <strong>"Atendimento excelente — me senti seguro do início ao fim."</strong>
-          <p class="muted" style="margin-top:8px">— Ana P., paciente</p>
+          <p class="muted" style="margin-top:8px">— Izabel P. paciente</p>
         </div>
         <div class="testi">
           <strong>"Profissionais atenciosos e resultado além do esperado."</strong>
-          <p class="muted" style="margin-top:8px">— Marcos R., paciente</p>
+          <p class="muted" style="margin-top:8px">— Daniel G. paciente</p>
         </div>
       </section>
-
     </main>
 
     <footer id="contact">
@@ -287,7 +281,6 @@
         <p class="muted" style="margin:0">© 2025 OmniCortex</p>
       </div>
     </footer>
-
   </div>
 
   <script>
@@ -301,3 +294,8 @@
   </script>
 </body>
 </html>
+
+
+
+
+
